@@ -16,7 +16,7 @@ const About = () => {
          </div>
 
 
-                <div className=" grid gap-3 md:mr-12 text-l">
+                <div className=" grid gap-3 md:mr-12   max-sm:m-10">
                 
                     <div>
                     <h1 className="text-3xl font-bold text-gray-800 flex items-center gap-2">
@@ -24,7 +24,7 @@ const About = () => {
                         Mon profil
                     </h1>
 
-                        <p className="text-justify">
+                        <p className="text-justify ">
                         Doté d’une solide expertise aussi bien en frontend qu’en backend, je construis des applications robustes, scalables et centrées sur l’utilisateur.
                         J'aime transformer des idées en produits concrets et fonctionnels, avec un souci constant de performance, de sécurité et de maintenabilité.
                         </p>

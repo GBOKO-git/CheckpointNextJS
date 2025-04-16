@@ -7,13 +7,13 @@ const Contact = () => {
         <>
            
             <div className="flex flex-col lg:flex-row justify-center items-center bg-gradient-to-r from-orange-100 via-white to-green-100 min-h-screen text-xl p-3 gap-6" >
-                <div className="max-w-md mx-auto bg-orange-400 p-8 rounded-2xl shadow-md space-y-6">
+                <div className="max-w-md mx-auto max-sm:w-87 bg-orange-300 p-8 rounded-2xl shadow-md space-y-6">
                 <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
                     <Handshake size={24} className="text-green-600" />
                     Travaillons ensemble
                 </h2>
 
-                    <p>
+                    <p className="max-sm:font-bold">
                         Vous avez un projet, une idée, ou simplement une question ? <br />
                         Je serais ravi d’échanger avec vous ! <br />
                         N'hésitez pas à me contacter par e-mail, via les réseaux ou en remplissant le formulaire ci-contre.
@@ -46,14 +46,14 @@ const Contact = () => {
                         >Envoyer</button>
                     </form>
                 </div>
-                <div className="max-w-md mx-auto bg-green-400 p-8 rounded-2xl shadow-md space-y-6">
+                <div className="max-w-md max-sm:w-87 mx-auto bg-green-300 p-8 rounded-2xl shadow-md space-y-6">
 
                     <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
                     <Mail size={24} className="text-blue-600" />
                     Informations de contact
-                    </h2>
-
-                    <ul className="space-y-2 text-gray-800">
+                    </h2> 
+                    
+                    <ul className="space-y-2 text-gray-800 max-sm:font-bold"> 
                         <li className="flex items-center gap-2">
                             <Mail size={18} className="text-blue-600" />
                             <a href="mailto:gbko.amara@uvci.edu.ci" target="_blank" rel="noopener noreferrer" className="hover:underline">
