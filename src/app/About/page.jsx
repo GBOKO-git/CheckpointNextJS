@@ -3,7 +3,8 @@ import "../../Components/style.css"
 const About = () => {
     return(
         <>
-           <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center bg-gradient-to-r from-indigo-100 via-blue-300 to-slate-100 min-h-screen h-auto" >
+           <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center
+            bg-blue-100 min-h-screen h-auto text-black">
                 
            <div className="flex justify-center">
             <img
