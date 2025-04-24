@@ -3,7 +3,7 @@ import { Mail, Github, Linkedin, MapPin, Handshake } from "lucide-react";
 const Contact = () => {
   return (
     <>
-      <div className=" grid mt-10 md:mt-15 md:p-6 pt-7 justify-center items-center bg-slate-200 min-h-screen text-xl gap-7">
+      <div className=" grid mt-10 md:mt-15 md:p-6 pt-7 justify-center items-center bg-slate-200 min-h-screen text-xl gap-7 text-black md:font-serif font-semibold">
         <div className="grid md:grid-cols-2 gap-5">
           <div className="md:w-2xl">
             <form className=" mx-auto bg-white p-8 rounded-2xl shadow-md space-y-6">
