@@ -19,7 +19,7 @@ import { Github, Linkedin, Instagram, Twitter } from "lucide-react";
 
         
 
-          <p className="text-black max-w-xl mx-auto">
+          <p className="text-black max-w-xl mx-auto font-serif">
             Passionné par la création de solutions web complètes,
             de l’interface utilisateur à la gestion des données côté serveur.
           </p>

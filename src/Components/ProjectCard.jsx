@@ -21,7 +21,7 @@ const ProjectCard = ({ project }) => {
             {name}
           </h3>
           {/* Texte toujours visible en md+ */}
-          <p className=" md:block text-black md:text-justify ">
+          <p className=" md:block text-black md:text-justify font-serif ">
             {description}
           </p>
           <p className="md:text-center text-red-600">{technologie} </p>

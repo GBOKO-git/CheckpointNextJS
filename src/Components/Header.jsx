@@ -21,7 +21,7 @@ const Header = () => {
                     height={40}
                     className="rounded-full hover:cursor-pointer"
                   />
-                <span className=" block text-white text-lg font-semibold"><i>AZOUM </i> Studio</span> 
+                <span className=" block text-black text-lg font-semibold"><i>AZOUM </i> Studio</span> 
                 </div>
 
         {/* Bouton menu mobile */}
