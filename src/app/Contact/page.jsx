@@ -94,7 +94,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="m-2 mx-auto max-sm:w-87 bg-white p-8 rounded-2xl shadow-md space-y-6">
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2 place-items-center">
+          <h2 className="text-2xl font-bold  flex items-center gap-2 place-items-center">
             <Handshake size={24} className="text-green-600 " />
             Travaillons ensemble
           </h2>

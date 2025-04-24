@@ -49,7 +49,7 @@ const About = () => {
                         <Rocket size={26} className="text-red-500" />
                         Ce que je propose
                     </h1>
-                        <div className="flex">
+                        <div className="md:flex">
                         <ul className="text-justify">
                             <li>Développement complet d’applications web</li>
                             <li>Intégration d’API et services tiers</li>
