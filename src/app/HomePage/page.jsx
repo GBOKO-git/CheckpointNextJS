@@ -5,7 +5,7 @@ import { Github, Linkedin, Instagram, Twitter } from "lucide-react";
  const HomePage = () => {
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-r from-gray-100 to-blue-200 flex justify-center items-center px-4">
+      <div className="min-h-screen bg-gradient-to-r from-gray-100 to-blue-200 flex justify-center items-center px-4 md:mt-15 mt-7">
         <div className="max-w-4xl text-center space-y-6">
           <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight tracking-tight">
             AMARA GBOKO <br /> ANZOUMANAN
@@ -60,7 +60,7 @@ import { Github, Linkedin, Instagram, Twitter } from "lucide-react";
           </div>
 
           <a href="/About" role="button">
-            <SharedButton name="About me" />
+            <SharedButton name="Mon profil" />
           </a>
         </div>
       </div>

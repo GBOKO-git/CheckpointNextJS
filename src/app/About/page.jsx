@@ -1,18 +1,19 @@
 import { MessageSquare, Rocket, Settings2, User } from "lucide-react";
 import "../../Components/style.css"
+import Link from "next/link";
 const About = () => {
     return(
         <>
-           <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center
+           <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center md:mt-15 mt-7
             bg-blue-100 min-h-screen h-auto text-black">
                 
            <div className="flex justify-center">
             <img
-                src="dev.png"
+                src="devpro.png"
                 alt="Portrait de Gboko"
                 width={362}
                 height={300}
-                className="bg-amber-200 rounded-t-full hover:scale-105 transition-transform duration-500 shadow-lg"
+                className="bg-amber-200 rounded-md hover:scale-105 transition-transform duration-500 shadow-lg"
             />
          </div>
 
@@ -48,13 +49,16 @@ const About = () => {
                         <Rocket size={26} className="text-red-500" />
                         Ce que je propose
                     </h1>
-
+                        <div className="flex">
                         <ul className="text-justify">
                             <li>Développement complet d’applications web</li>
                             <li>Intégration d’API et services tiers</li>
                             <li>Maintenance et évolution de projets existants</li>
                             <li>Collaboration fluide avec les équipes produit, design et technique</li>
                         </ul>
+                        <Link href="/Projects" ><button className="text-purple-800 italic border-y hover:bg-purple-600 hover:text-white px-1"> voir mes projets</button></Link>
+                        </div>
+                        
                     </div>
                     <div>
                     <h1 className="text-3xl font-bold text-gray-800 flex items-center gap-2">

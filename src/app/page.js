@@ -1,6 +1,6 @@
-import About from "./About/page";
-import Contact from "./Contact/page";
-import Project from "./Projects/page";
+// import About from "./About/page";
+// import Contact from "./Contact/page";
+// import Project from "./Projects/page";
 import HomePage from "./HomePage/page";
 
 export default function Home() {
@@ -9,9 +9,9 @@ export default function Home() {
       <div>
         <div>
           <HomePage/>
-          <About/>
+          {/* <About/>
           <Project/>
-          <Contact/>
+          <Contact/> */}
         </div>
       </div>
     </>

@@ -5,7 +5,7 @@ import { Github, Instagram, FacebookIcon , Twitter, Linkedin } from "lucide-reac
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-950 text-white px-6 py-10 mt-10">
+    <footer className="bg-gray-950 text-white px-6 py-10 ">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         
         {/* Logo */}
@@ -25,7 +25,7 @@ const Footer = () => {
           <li><Link href="/" className="hover:text-white transition">Home</Link></li>
           <li><Link href="/About" className="hover:text-white transition">About</Link></li>
           <li><Link href="/Projects" className="hover:text-white transition">Projects</Link></li>
-          <li><Link href="/HomePage" className="hover:text-white transition">HomePage</Link></li>
+          {/* <li><Link href="/HomePage" className="hover:text-white transition">HomePage</Link></li> */}
           <li><Link href="/Contact" className="hover:text-white transition">Contact</Link></li>
         </ul>
       </div>

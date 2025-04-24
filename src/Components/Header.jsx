@@ -10,18 +10,18 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className=" bg-blue-400/40 fixed top-0 w-full z-50 shadow-lg">
-      <div className="flex justify-between items-center  md:px-8">
+    <header className=" bg-blue-400 fixed top-0 w-full z-50 shadow-lg px-6">
+      <div className="flex justify-between items-center  md:px-20">
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3  md:ml-5">
                   <Image
                     src="/logodev.png"
                     alt="profil"
                     width={40}
                     height={40}
-                    className="rounded-full"
+                    className="rounded-full hover:cursor-pointer"
                   />
-                <span className="block text-sm font-normal text-gray-700">Full Stack Developer</span> 
+                <span className=" block text-white text-lg font-semibold"><i>AZOUM </i> Studio</span> 
                 </div>
 
         {/* Bouton menu mobile */}
@@ -43,9 +43,9 @@ const Header = () => {
             <li>
                 <Link href="/Projects">Projets</Link>
             </li>
-            <li>
+            {/* <li>
                 <Link href="/HomePage">Profil</Link>
-            </li>
+            </li> */}
             <li>
                 <Link href="/Contact">Contact</Link>
             </li>
@@ -61,7 +61,7 @@ const Header = () => {
           <li><Link href="/" onClick={() => setMenuOpen(false)}>Accueil</Link></li>
           <li><Link href="/About" onClick={() => setMenuOpen(false)}>À propos</Link></li>
           <li><Link href="/Projects" onClick={() => setMenuOpen(false)}>Mes Projets</Link></li>
-          <li><Link href="/HomePage" onClick={() => setMenuOpen(false)}>Mon Profil</Link></li>
+          {/* <li><Link href="/HomePage" onClick={() => setMenuOpen(false)}>Mon Profil</Link></li> */}
           <li><Link href="/Contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
         </ul>
       )}
