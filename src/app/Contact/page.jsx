@@ -1,12 +1,39 @@
+"use client";
+
 import { Mail, Github, Linkedin, MapPin, Handshake } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [success, setSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    if (res.ok) {
+      setForm({ name: "", email: "", message: "" });
+      setSuccess(true);
+    }
+  };
   return (
     <>
       <div className=" grid mt-10 md:mt-15 md:p-6 pt-7 justify-center items-center bg-slate-200 min-h-screen text-xl gap-7 text-black md:font-serif font-semibold">
         <div className="grid md:grid-cols-2 gap-5">
           <div className="md:w-2xl">
-            <form className=" mx-auto bg-white p-8 rounded-2xl shadow-md space-y-6">
+            <form
+              onSubmit={handleSubmit}
+              className=" mx-auto bg-white p-8 rounded-2xl shadow-md space-y-6"
+            >
               <h2 className="text-2xl font-bold text-gray-800 text-center mb-9">
                 Contactez-moi
               </h2>
@@ -14,6 +41,9 @@ const Contact = () => {
               <div className="grid">
                 <label htmlFor="name">Nom</label>
                 <input
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
                   type="text"
                   placeholder="Votre nom"
                   required
@@ -23,6 +53,9 @@ const Contact = () => {
               <div className="grid">
                 <label htmlFor="email">Email</label>
                 <input
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
                   type="text"
                   placeholder="gboko.amara@gmail.com"
                   required
@@ -30,8 +63,11 @@ const Contact = () => {
                 />
               </div>
               <div className="grid">
-                <label htmlFor="name">Message</label>
+                <label htmlFor="message">Message</label>
                 <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
                   type="text"
                   placeholder="Votre message"
                   required
@@ -40,11 +76,16 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 cursor-pointer"
               >
                 Envoyer
               </button>
             </form>
+            {success && (
+              <p className="text-green-600 mt-3 font-serif">
+                Message Envoyé avec success
+              </p>
+            )}
           </div>
           <div className="md:w-2xl max-sm:w-87 mx-auto bg-white p-8 rounded-2xl shadow-lg space-y-6  grid justify-center">
             <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
