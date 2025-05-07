@@ -1,6 +1,5 @@
-// import About from "./About/page";
-// import Contact from "./Contact/page";
-// import Project from "./Projects/page";
+
+import ProjetRecent from "@/Components/ProjetRecents/Projet";
 import HomePage from "./HomePage/page";
 
 export default function Home() {
@@ -9,9 +8,7 @@ export default function Home() {
       <div>
         <div>
           <HomePage/>
-          {/* <About/>
-          <Project/>
-          <Contact/> */}
+          <ProjetRecent/>
         </div>
       </div>
     </>

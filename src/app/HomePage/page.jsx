@@ -5,9 +5,9 @@ import { Github, Linkedin, Instagram, Twitter } from "lucide-react";
  const HomePage = () => {
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-r from-gray-100 to-blue-200 flex justify-center items-center px-4 md:mt-15 mt-7">
-        <div className="max-w-4xl text-center space-y-6">
-          <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight tracking-tight">
+      <div className="min-h-screen bg-gray-900/100 flex text-white justify-center items-center px-4 md:mt-15 mt-7">
+        <div className="max-w-4xl text-center space-y-6  ">
+          <h1 className="text-5xl md:text-7xl font-extrabold  leading-tight tracking-tight">
             AMARA GBOKO <br /> ANZOUMANAN
           </h1>
 
@@ -19,7 +19,7 @@ import { Github, Linkedin, Instagram, Twitter } from "lucide-react";
 
         
 
-          <p className="text-black max-w-xl mx-auto font-serif">
+          <p className=" max-w-xl mx-auto font-serif">
             Passionné par la création de solutions web complètes,
             de l’interface utilisateur à la gestion des données côté serveur.
           </p>
@@ -59,8 +59,8 @@ import { Github, Linkedin, Instagram, Twitter } from "lucide-react";
             </a>
           </div>
 
-          <a href="/About" role="button">
-            <SharedButton name="Mon profil" />
+          <a href="#newProjet" role="button">
+            <SharedButton name="Mes projets recents" />
           </a>
         </div>
       </div>

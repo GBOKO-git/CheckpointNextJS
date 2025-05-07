@@ -6,28 +6,87 @@ import { useState } from "react";
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   const res = await fetch("/api/contact", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(form),
+  //   });
+
+  //   if (res.ok) {
+  //     setForm({ name: "", email: "", message: "" });
+  //     setSuccess(true);
+  //     alert(`Merci pour votre message, ${form.name} !\n Nous vous contacterons très bientôt par e-mail. \n À très vite !`);
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
+    const { name, email, message } = form;
 
-    if (res.ok) {
-      setForm({ name: "", email: "", message: "" });
-      setSuccess(true);
+    // Validation simple
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!/^[A-Za-zÀ-ÿ\s'-]{3,}$/.test(name.trim())) {
+      alert("Veuillez entrer un nom valide (au moins 3 lettres).");
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      alert("Veuillez entrer une adresse e-mail valide.");
+      return;
+    }
+
+    if (!message.trim() || message.length < 10) {
+      alert("Veuillez entrer un message d’au moins 10 caractères.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      // Si tout est bon, on envoie
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setForm({ name: "", email: "", message: "" });
+        setSuccess(true);
+        alert(
+          `Merci pour votre message, ${name} !\nNous vous contacterons très bientôt par e-mail. À très vite !`
+        );
+      } else {
+        alert("Une erreur est survenue. Veuillez réessayer plus tard.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Erreur de connexion. Veuillez réessayer plus tard.");
+    } finally {
+      setLoading(false);
     }
   };
+
   return (
     <>
       <div className=" grid mt-10 md:mt-15 md:p-6 pt-7 justify-center items-center bg-slate-200 min-h-screen text-xl gap-7 text-black md:font-serif font-semibold">
+        <div className=" flex justify-center">
+          {success && (
+            <p className="text-green-600 mt-3 font-serif text-center bg-green-900/30 w-96 p-1 rounded-sm">
+              Message Envoyé avec success
+            </p>
+          )}
+        </div>
         <div className="grid md:grid-cols-2 gap-5">
           <div className="md:w-2xl">
             <form
@@ -76,16 +135,12 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
+                disabled={loading}
                 className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 cursor-pointer"
               >
-                Envoyer
+                {loading ? "En cour d'envoi" : "Envoyer"}
               </button>
             </form>
-            {success && (
-              <p className="text-green-600 mt-3 font-serif">
-                Message Envoyé avec success
-              </p>
-            )}
           </div>
           <div className="md:w-2xl max-sm:w-87 mx-auto bg-white p-8 rounded-2xl shadow-lg space-y-6  grid justify-center">
             <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
