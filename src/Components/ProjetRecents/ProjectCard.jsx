@@ -74,7 +74,7 @@ const NewProject = () => {
           id="default-modal"
           tabIndex="-1"
           aria-hidden="null"
-          className=" flex fixed inset-0 bg-slate-100/90 bg-opacity-50  top-0 right-0 left-0 z-100 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+          className=" flex fixed inset-0 bg-gray-500/90 bg-opacity-50  top-0 right-0 left-0 z-100 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
         >
           <div className="relative p-4 w-full max-w-2xl max-h-full">
             {/* <!-- Modal content --> */}
