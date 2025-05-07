@@ -71,7 +71,7 @@ const Contact = () => {
       }
     } catch (error) {
       console.error(error);
-      alert("Erreur de connexion. Veuillez réessayer plus tard.");
+      alert("Erreur de connexion. Veuillez réessayer plus tard."+ error.message);
     } finally {
       setLoading(false);
     }
