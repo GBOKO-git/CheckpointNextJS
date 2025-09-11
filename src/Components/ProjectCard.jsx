@@ -1,10 +1,8 @@
 "use client";
 import Link from "next/link";
 import { SharedButton } from "./SharedButton";
-// import { useState } from "react";
 
 const ProjectCard = ({ project }) => {
-//   const [text, setText] = useState(false);
   const { name, description, technologie, projectUrl, imgUrl } = project;
   return (
     <>
@@ -25,21 +23,6 @@ const ProjectCard = ({ project }) => {
             {description}
           </p>
           <p className="md:text-center text-red-600">{technologie} </p>
-          {/* <div className="flex justify-around"> */}
-          {/* <div className="text-center">
-            <button
-              className="md:hidden bg-blue-300 px-3  text-xl  rounded hover:text-amber-50 hover:bg-blue-900 hover:cursor-pointer"
-              onClick={() => setText(!text)}
-            >
-              {text ? "Masquer" : "Description"}
-            </button>
-
-            {text && (
-              <p className="text-justify h-40 font-bold text-black text-sm">
-                {description}
-              </p>
-            )}
-          </div> */}
 
           <Link
             href={projectUrl}

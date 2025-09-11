@@ -1,7 +1,9 @@
 "use client";
 
 import { Mail, Github, Linkedin, MapPin, Handshake } from "lucide-react";
+import { MdOutlinePhoneIphone } from "react-icons/md";
 import { useState } from "react";
+import PhoneItem from "@/Components/PhoneNumber";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -149,6 +151,8 @@ const Contact = () => {
             </h2>
 
             <ul className="space-y-2 text-gray-800 max-sm:font-bold">
+              
+              <PhoneItem/>
               <li className="flex items-center gap-2">
                 <Mail size={18} className="text-blue-600" />
                 <a
