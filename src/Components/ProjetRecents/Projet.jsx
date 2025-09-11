@@ -17,13 +17,14 @@ const ProjetRecent = () => {
     <>
       <div
         style={{ backgroundImage: `url(${bgImages[index]})` }}
-        className="min-h-screen items-center justify-center grid bg-center bg-cover w-full transition-all duration-1000 ease-in-out"
+        className=" pt-7 items-center justify-center grid bg-center bg-cover w-full transition-all duration-1000 ease-in-out"
       >
         <p className="font-extrabold text-2xl text-white text-center">
           {" "}
           MES PROJETS RECENTS
         </p>
-        <div className="container md:flex px-5 gap-5 grid">
+        <a href="/projects"></a>
+        <div className="container md:flex px-5 gap-5 grid my-10">
           <NewProject/>
         </div>
       </div>

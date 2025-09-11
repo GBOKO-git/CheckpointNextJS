@@ -7,7 +7,7 @@ const newProjects = [
   {
     name: "AZshop",
     image: "/azshop.png",
-    status: "Déployé",
+    status: "En ligne",
     title: "Site e-commerce de produits vivriers ivoiriens",
     link: "https://e-commerce-azshop.vercel.app/",
     description:
@@ -20,9 +20,9 @@ const newProjects = [
   {
     name: "AEEY",
     image: "/aeey.png",
-    status: "En production",
+    status: "En ligne",
     title: "Association des Eleves et Etudiants de Yaokro ",
-    link: "#",
+    link: "https://aeey.netlify.app/",
     description:
       "L’Association des Élèves et Étudiants de Yaokro (AEEY) est un cadre de rassemblement, de solidarité et de développement pour les jeunes de Yaokro engagés dans des études secondaires et supérieures.",
     details:
@@ -30,13 +30,28 @@ const newProjects = [
     technologies:
       "Next.js, Tailwind CSS, Redux, MongoDB et Express.",
   },
+  {
+    name: "EDAMOA",
+    image: "/edamoa.png",
+    status: "En ligne",
+    title: "Edamoa est une boutique en ligne",
+    link: "https://www.edamoashop.com/",
+    description:
+      "Edamoa est une boutique en ligne basée à Cocody Angré Château (à 200m de la pharmacie du château d’eau), spécialisée dans la vente de produits utiles, innovants et accessibles à tous.",
+    details:
+      "Edamoa est une boutique en ligne basée à Cocody Angré Château (à 200m de la pharmacie du château d’eau), spécialisée dans la vente de produits utiles, innovants et accessibles à tous. Notre objectif est simple : faciliter la vie quotidienne de nos clients en leur proposant des articles de qualité, livrés rapidement et en toute sécurité partout en Côte d'Ivoire. Créée par des entrepreneurs passionnés du digital et du commerce, Edamoa est bien plus qu’une simple boutique. C’est une plateforme de confiance où le service client, la fiabilité et la satisfaction sont au cœur de nos engagements.",
+    technologies:
+      "React.js, TailwindCSS, MongoDB/Prisma et Express.",
+  },
+  
 ];
 
 const NewProject = () => {
   const [showModal, setShowModal] = useState(null);
   return (
     <>
-      {newProjects.map((project, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-5">
+        {newProjects.map((project, index) => (
         <div
         id="newProjet"
           key={index}
@@ -50,11 +65,12 @@ const NewProject = () => {
             />
           </a>
           <div className="p-5">
-            <a href="#">
+            <Link 
+            href={project.link} target="_blank">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {project.name}
               </h5>
-            </a>
+            </Link>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
               {project.title}
             </p>
@@ -68,13 +84,14 @@ const NewProject = () => {
           </div>
         </div>
       ))}
+      </div>
 
       {showModal && (
         <div
           id="default-modal"
           tabIndex="-1"
           aria-hidden="null"
-          className=" flex fixed inset-0 bg-gray-500/90 bg-opacity-50  top-0 right-0 left-0 z-100 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+          className=" flex fixed inset-0 bg-gray-300/50 bg-opacity-50  top-0 right-0 left-0 z-100 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
         >
           <div className="relative p-4 w-full max-w-2xl max-h-full">
             {/* <!-- Modal content --> */}
@@ -110,13 +127,13 @@ const NewProject = () => {
               </div>
               {/* <!-- Modal body --> */}
               <div className="p-4 md:p-5 space-y-4">
-                <p className="text-base leading-relaxed text-gray-800 dark:text-gray-400">
+                <p className="text-base leading-relaxed text-gray-800 dark:text-white">
                   {showModal.description}
                 </p>
-                <p className="text-base leading-relaxed text-gray-800 dark:text-gray-400">
+                <p className="text-base leading-relaxed text-gray-800 dark:text-white">
                   {showModal.details}
                 </p>
-                <p className=" leading-relaxed text-gray-800 dark:text-gray-400 font-serif font-bold">
+                <p className=" leading-relaxed text-gray-800 dark:text-white font-serif font-bold">
                   {showModal.technologies}
                 </p>
               </div>

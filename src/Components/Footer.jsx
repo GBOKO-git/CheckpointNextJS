@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         
         {/* Logo */}
-        <div className="flex items-center gap-3">
+        <div className="flex max-md:justify-between items-center gap-3 w-full">
           <Image
             src="/logodev.png"
             alt="profil"
@@ -17,11 +17,11 @@ const Footer = () => {
             height={40}
             className="rounded-full"
           />
-          <span className="text-lg font-semibold"> <i>AZOUM</i> Studio</span>
+          <a href="/" className="text-lg font-semibold">  AZOUMStudio</a>
         </div>
 
         {/* Navigation */}
-        <ul className="flex flex-col md:flex-row gap-4 md:gap-10 text-sm text-gray-300">
+        <ul className="flex  md:flex-row gap-4 md:gap-10 text-sm text-gray-300">
           <li><Link href="/" className="hover:text-white transition">Home</Link></li>
           <li><Link href="/About" className="hover:text-white transition">About</Link></li>
           <li><Link href="/Projects" className="hover:text-white transition">Projects</Link></li>
