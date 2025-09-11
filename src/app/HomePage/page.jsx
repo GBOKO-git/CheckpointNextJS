@@ -111,7 +111,7 @@ const words = [
     <div className="min-h-dvh flex justify-center items-center px-4 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
       <div className="max-w-4xl text-center space-y-6">
         <motion.h1
-          className="text-2xl md:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight"
+          className="text-2xl md:text-5xl lg:text-7xl font-extrabold font-serif leading-tight tracking-tight"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
