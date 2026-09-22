@@ -109,7 +109,7 @@ const words = [
 
   return (
     <div className="min-h-dvh flex justify-center items-center px-4 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
-      <div className="max-w-4xl text-center space-y-6">
+      <div className="md:min-w-6xl text-center space-y-6">
         <motion.h1
           className="text-2xl md:text-5xl lg:text-7xl font-extrabold font-serif leading-tight tracking-tight"
           initial={{ opacity: 0, y: -20 }}
@@ -124,7 +124,7 @@ const words = [
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          DEVELOPPEUR FULL STACK JUNIOR
+          DEVELOPPEUR FULL STACK
         </motion.h2>
         <motion.h6
           className="text-sm md:text-md text-blue-400 font-semibold"
@@ -136,13 +136,15 @@ const words = [
         </motion.h6>
 
         <motion.p
-          className="max-w-xl mx-auto font-serif text-gray-300"
+          className="md:w-3xl mx-auto text-lg text-white text-left md:text-justify space-y-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          Développeur full stack passionné, je crée des applications web performantes et élégantes,
-          du design de l’interface à la gestion efficace des données côté serveur.
+          <p>Titulaire d'une Licence obtenue à l'Université Virtuelle de Côte d'Ivoire en 2019, j'ai suivi en 2025 un bootcamp en Développement Fullstack à GoMyCode, dans le cadre du programme « L'École de la Deuxième Chance », une initiative du Ministère de l'Enseignement Technique, de la Formation Professionnelle et de l'Apprentissage de Côte d'Ivoire.</p>
+          <p>À l'issue de cette formation, j'ai obtenu à la fois le certificat de SOFTWARE DEVELOPPER BOOTCAMP à  GoMyCode et le Certificat de Qualification Professionnelle (CQP) délivré par l'État ivoirien.</p>
+          <p>j'ai ensuite effectué un stage de 3 mois au sein de SC Digital, entreprise dans laquelle je suis aujourd'hui employé en tant que Développeur Fullstack. </p>
+          <p>je contribue activement à des projets concrets, mobilisant mes compétences en développement web et en développement backend.</p>
         </motion.p>
 
         <motion.div

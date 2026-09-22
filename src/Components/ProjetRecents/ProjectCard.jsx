@@ -30,6 +30,31 @@ const newProjects = [
     technologies:
       "Next.js, Tailwind CSS, Redux, MongoDB et Express.",
   },
+  
+  {
+    name: "AEEY",
+    image: "/image-aeey.png",
+    status: "En production",
+    title: "Association des Eleves et Etudiants de Yaokro ",
+    link: "https://aeey.vercel.app",
+    description:
+      "L’Association des Élèves et Étudiants de Yaokro (AEEY) est un cadre de rassemblement, de solidarité et de développement pour les jeunes de Yaokro engagés dans des études secondaires et supérieures.",
+    details:
+      "L’AEEY est une organisation estudiantine dynamique regroupant les élèves et étudiants originaires de Yaokro. Elle a pour mission de promouvoir la solidarité, l’excellence académique, le développement personnel et l'engagement communautaire de ses membres à travers des activités culturelles, éducatives et sociales. Notre association est un cadre d'entraide, de partage et de valorisation de notre identité, où chaque membre trouve soutien et inspiration pour réussir son parcours scolaire et universitaire.",
+    technologies:
+      "react.js, Tailwind CSS,  prisma et Expressjs.",
+  },
+  {
+    name: "YAYOH SANTE",
+    image: "/yayohsante.png",
+    status: "En ligne",
+    title: "Boutique starter",
+    link: "https://yayohsante.vercel.app/",
+    description:"boutiquen en ligne avec systeme de paiement par whatsapp",
+    details:"les utilisateur passe leur commande directement par whatsApp",
+    technologies:
+      "react.js, Tailwind CSS,  prisma et Expressjs.",
+  },
   {
     name: "EDAMOA",
     image: "/edamoa.png",
@@ -91,9 +116,9 @@ const NewProject = () => {
           id="default-modal"
           tabIndex="-1"
           aria-hidden="null"
-          className=" flex fixed inset-0 bg-gray-300/50 bg-opacity-50  top-0 right-0 left-0 z-100 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+          className=" flex fixed inset-0 bg-black bg-opacity-40  top-0 right-0 left-0 z-100 justify-center items-center w-full md:inset-0  max-h-full"
         >
-          <div className="relative p-4 w-full max-w-2xl max-h-full">
+          <div className="relative md:p-4 w-full max-w-2xl max-h-full">
             {/* <!-- Modal content --> */}
             <div className="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
               {/* <!-- Modal header --> */}
@@ -139,7 +164,7 @@ const NewProject = () => {
               </div>
               {/* <!-- Modal footer --> */}
               <div className="flex justify-between items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                <div>
+                <div className="flex gap-2">
                   <Link
                     href={showModal.link}
                     target="_blank"
