@@ -21,7 +21,7 @@ const Header = () => {
             className="rounded-full hover:cursor-pointer"
           />
           <Link href="/" className=" block text-black text-lg font-semibold">
-            AZOUMStudio
+            gboko.dev
           </Link>
         </div>
 
@@ -45,11 +45,11 @@ const Header = () => {
           <li className="hover:text-green-300 ">
             <Link href="/Projects">Projets</Link>
           </li>
-          {/* <li className="hover:text-green-300 ">
-                <Link href="/HomePage">Profil</Link>
-            </li> */}
           <li className="hover:text-green-300 ">
             <Link href="/Contact">Contact</Link>
+          </li>
+          <li className="hover:text-green-300 ">
+            <Link href="/formation">Services</Link>
           </li>
         </ul>
       </div>

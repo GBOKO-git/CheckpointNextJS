@@ -17,7 +17,7 @@ const Footer = () => {
             height={40}
             className="rounded-full"
           />
-          <a href="/" className="text-lg font-semibold">  AZOUMStudio</a>
+          <a href="/" className="text-lg font-semibold">  gboko.dev</a>
         </div>
 
         {/* Navigation */}
@@ -25,8 +25,8 @@ const Footer = () => {
           <li><Link href="/" className="hover:text-white transition">Home</Link></li>
           <li><Link href="/About" className="hover:text-white transition">About</Link></li>
           <li><Link href="/Projects" className="hover:text-white transition">Projects</Link></li>
-          {/* <li><Link href="/HomePage" className="hover:text-white transition">HomePage</Link></li> */}
           <li><Link href="/Contact" className="hover:text-white transition">Contact</Link></li>
+          <li><Link href="/formation" className="hover:text-white transition">Services</Link></li>
         </ul>
       </div>
 

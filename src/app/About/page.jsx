@@ -9,8 +9,8 @@ const About = () => {
                 
            <div className="flex justify-center">
             <img
-                src="devpro.png"
-                alt="Portrait de Gboko"
+                src="gboko.jpeg"
+                alt="GBOKO AMARA"
                 width={362}
                 height={300}
                 className="bg-amber-200 rounded-md hover:scale-105 transition-transform duration-500 shadow-lg"
