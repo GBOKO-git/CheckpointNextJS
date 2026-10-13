@@ -78,10 +78,13 @@ const Header = () => {
               Mes Projets
             </Link>
           </li>
-          {/* <li className="cursor-pointer hover:text-green-400 hover:underline"><Link href="/HomePage" onClick={() => setMenuOpen(false)}>Mon Profil</Link></li> */}
           <li className="cursor-pointer hover:text-green-400 hover:underline">
             <Link href="/Contact" onClick={() => setMenuOpen(false)}>
               Contact
+            </Link>
+          </li>
+          <li className="cursor-pointer hover:text-green-400 hover:underline">
+            <Link href="/formation" onClick={() => setMenuOpen(false)}>Services
             </Link>
           </li>
         </ul>

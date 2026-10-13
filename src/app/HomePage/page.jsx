@@ -55,16 +55,18 @@ const words = [
         >
           DEVELOPPEUR FULL STACK
         </motion.h2>
-        <motion.h6
-          className="text-sm md:text-md text-blue-400 font-semibold"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          {text}
-        </motion.h6>
+        <motion.div className=" h-12 text-center">
+          <motion.h6
+            className="text-sm md:text-md text-blue-400 font-semibold"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            {text}
+          </motion.h6>
+        </motion.div>
 
-        <motion.p
+        <motion.div
           className="md:w-3xl mx-auto text-lg text-white text-left md:text-justify space-y-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -74,7 +76,7 @@ const words = [
           <p>À l'issue de cette formation, j'ai obtenu à la fois le certificat de SOFTWARE DEVELOPPER BOOTCAMP à  GoMyCode et le Certificat de Qualification Professionnelle (CQP) délivré par l'État ivoirien.</p>
           <p>j'ai ensuite effectué un stage de 3 mois au sein de SC Digital, entreprise dans laquelle je suis aujourd'hui employé en tant que Développeur Fullstack. </p>
           <p>je contribue activement à des projets concrets, mobilisant mes compétences en développement web et en développement backend.</p>
-        </motion.p>
+        </motion.div>
 
         <motion.div
           className="flex justify-center gap-6 text-blue-400 text-lg"
